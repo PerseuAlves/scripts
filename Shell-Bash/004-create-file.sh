@@ -3,7 +3,12 @@
 # returns 0 if the file "text.txt" was created 
 # in a folder named "/tmp" in the current directory
 
-mkdir ./tmp && cd ./tmp && touch text.txt && echo "file created" && exit 0
+# colors
+NC='\033[0m'
+BRED='\033[1;31m' 
+BGREEN='\033[1;32m'
 
-echo "error"
+mkdir ./tmp && cd ./tmp && touch text.txt && echo "file created" && cd ../ && echo -e "\n${BGREEN}Done!${NC}" && exit 0
+
+echo -e "\n${BRED}unexpected error${NC}"
 exit 1
