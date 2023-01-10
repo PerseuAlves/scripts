@@ -29,6 +29,35 @@ echo -e "" -> enables interpretation of escape codes after backslash.
     \r -> carriage return (CR).
     \t -> horizontal tab.
     \v -> vertical tab.
+    
+printf "" -> powerful terminal output (better than echo).
+
+    \\ -> displays a backslash character.
+    \b -> displays a backspace character.
+    \n -> displays a new line.
+    \r -> displays a carriage return.
+    \t -> displays a horizontal tab.
+    \v -> displays a vertical tab.
+
+    %b     -> print the argument while expanding backslash escape sequences.
+    %q     -> print the argument shell-quoted, reusable as input.
+    %d, %i -> print the argument as a signed decimal integer.
+    %u     -> print the argument as an unsigned decimal integer.
+    %o     -> print the argument as an unsigned octal integer.
+    %x, %X -> print the argument as an unsigned hexadecimal integer. %x prints lower-case letters and %X prints upper-case.
+    %e, %E -> print the argument as a floating-point number in exponential notation. %e prints lower-case letters and %E prints upper-case.
+    %a, %A -> print the argument as a floating-point number in hexadecimal fractional notation. %a prints lower-case letters and %A prints upper-case.
+    %g, %G -> print the argument as a floating-point number in normal or exponential notation, whichever is more appropriate for the given value and precision. %g prints lower-case letters and %G prints upper-case.
+    %c     -> print the argument as a single character.
+    %f     -> print the argument as a floating-point number.
+    %s     -> print the argument as a string.
+    %%     -> print a literal % symbol.
+    
+    -     -> Left align the printed text within the field. By default, the text is right-aligned.
+    +     -> Prefix the numbers with a + or - signs. By default, only negative numbers are prefixed with a negative sign.
+    0     -> Pads numbers with leading zeros rather than space.
+    blank -> Prefix the positive numbers with a blank space and negative numbers with a minus (-).
+    #     -> An alternative format for numbers.
 
 read VARIABLE -> terminal input to variable.
 read -p "" VARIABLE -> terminal output + terminal input.
