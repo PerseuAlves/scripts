@@ -58,6 +58,10 @@ printf "" -> powerful terminal output (better than echo).
     0     -> Pads numbers with leading zeros rather than space.
     blank -> Prefix the positive numbers with a blank space and negative numbers with a minus (-).
     #     -> An alternative format for numbers.
+    
+printf "abc\
+def\
+ghi" -> string continuation using backslash (\).
 
 read VARIABLE -> terminal input to variable.
 read -p "" VARIABLE -> terminal output + terminal input.
